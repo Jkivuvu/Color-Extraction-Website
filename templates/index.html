@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% from "bootstrap5/form.html" import render_form %}
+    <meta charset="UTF-8">
+    <title>Extract Colors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+</head>
+<body class="body-bg body-bg">
+    <div class="col-lg-8 col-md-10 mx-auto" style="padding-top: 17%;">
+    <form style='width: 100%; padding: 12px 20px;' action="/" method="post" enctype="multipart/form-data">
+        <div style="padding: 20px;">
+        <h1>Welcome to the color extractor tool</h1>
+        </div>
+        <div style="padding: 20px;">
+        <input class='btn btn-lg btn-light fw-bold border-grey bg-white' style='width: 100%; border: 1px solid #ccc;' type="file" name="picture" required>
+        </div>
+        <div style="padding: 20px;">
+        <input class='btn btn-lg btn-light fw-bold border-grey bg-white' style='width: 100%; border: 1px solid #ccc;' type="number" name="Numbers" min="1" max="20" placeholder="How many colors do you wish for?" required>
+        </div>
+        <div style="padding: 20px;">
+        <input class='btn btn-lg btn-light fw-bold border-grey bg-white' type="submit" value="Upload">
+        </div>
+    </form>
+    </div>
+</body>
+</html>
+
+
